@@ -10,7 +10,7 @@
 
 .ORIG x3000
 
-LEA R2, ARRAY
+LD R2, ARRPTR
 
 LOOP
     GETC
@@ -28,13 +28,16 @@ LOOP
 LD R0, ZERO
 STR R0, R2, #0 ;null-terminate
 
-LEA R0, ARRAY
+LD R0, ARRPTR
 PUTS ;print line
     
 HALT
 
 ZERO .FILL #0
 NEWLINE .FILL '\n'
+ARRPTR .FILL 0x4000
+
+.orig x4000
 ARRAY
 
 .END
