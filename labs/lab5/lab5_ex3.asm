@@ -74,6 +74,7 @@ INSUB ;return value in R2
 		
 		charin3100
 		GETC
+		OUT
 		ADD R0, R0, R3
 		BRz ifzero3100
 		BRp testin3100
@@ -95,18 +96,15 @@ INSUB ;return value in R2
 		
 		ifzero3100
 			LD R0, ZERO3100
-			OUT
 			BR endif3100a
 			
 		ifspace3100
 			LD R0, SPACE3100
-			OUT
 			BR charin3100
 			
 		ifone3100
 			ADD R2, R2, R5
 			LD R0, ONE3100
-			OUT
 			BR endif3100a
 			
 		endif3100a
