@@ -2,7 +2,7 @@
 ; Name: Merrick Slane
 ; Email: mslan002@ucr.edu
 ; 
-; Lab: lab 6, ex 2
+; Lab: lab 6, ex 3
 ; Lab section: 025
 ; TA: Ethan Valdez
 ; 
@@ -20,7 +20,7 @@
 	LD R0, strarrayptr
 	PUTS
 
-	;todo: calculate R5 here
+	;calculate R5 here
 	AND R5, R5, #0
 	ADD R5, R5, R1
 	ADD R5, R5, #-1
