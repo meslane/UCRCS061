@@ -309,6 +309,9 @@ r7backup3600 .BLKW #1
 					ST R2, r2backup3800
 					ST R3, r3backup3800
 					ST R7, r7backup3800
+					
+					LEA R0, prompt3800
+					PUTS
 				 
 					inputloop3800
 						GETC
@@ -332,6 +335,8 @@ r7backup3600 .BLKW #1
 					ret
 ;-----------------------------------------------------------------------------------------------
 ; SUB_GET_STRING local data
+
+prompt3800 .STRINGZ "Enter an Instruction: \n"
 
 r0backup3800 .BLKW #1
 r2backup3800 .BLKW #1
